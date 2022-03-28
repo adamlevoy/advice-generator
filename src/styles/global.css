@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;800&display=swap');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+:root {
+	font-family: 'Manrope', sans-serif;
+	font-size: 1rem;
+	--user-font-scale: 1rem - 16px;
+	font-size: clamp(
+		0.875rem,
+		0.4626rem + 1.0309vw + var(--user-font-scale),
+		1.125rem
+	);
+
+	--primary-cyan: hsl(193, 38%, 86%);
+	--primary-neon: hsl(150, 100%, 66%);
+	--neutral-gray: hsl(217, 19%, 38%);
+	--neutral-dark-gray: hsl(217, 19%, 24%);
+	--neutral-drak-blue: hsl(218, 23%, 16%);
+
+	--fs-quote: 28px;
+}
+
+body {
+	padding: 4rem 2rem;
+	width: 100%;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--neutral-drak-blue);
+	color: white;
+}
+
+img {
+	width: 100%;
+}
+
+.card {
+	display: grid;
+	place-items: center;
+	gap: 2rem;
+	align-items: center;
+	max-width: 450px;
+	margin-inline: auto;
+	background-color: var(--neutral-dark-gray);
+	padding: 2rem;
+	border-radius: 1rem;
+	text-align: center;
+	-webkit-box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.4);
+	box-shadow: 0px 0px 46px 0px rgba(0, 0, 0, 0.4);
+}
+
+.card span {
+	color: var(--primary-neon);
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 0.25em;
+}
+
+.card img {
+	margin-bottom: 2rem;
+}
+
+.quote {
+	font-size: var(--fs-quote);
+	font-weight: 800;
+}
+
+.divider-mobile {
+	display: none;
+}
+
+button {
+	display: grid;
+	place-items: center;
+	background-color: var(--primary-neon);
+	border: none;
+	border-radius: 100%;
+	padding: 1rem;
+	margin-top: -30px;
+	cursor: pointer;
+	transition: box-shadow 0.1s ease-in-out;
+}
+
+button:hover,
+button:focus,
+button:active {
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(81, 255, 167, 0.9);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(81, 255, 167, 0.9);
+	box-shadow: 0px 0px 30px 0px rgba(81, 255, 167, 0.9);
+}
+
+.attribution {
+	position: absolute;
+	bottom: 0;
+	padding: 1rem;
+	font-size: 11px;
+	font-weight: 400;
+	text-align: center;
+}
+
+.attribution a {
+	color: var(--primary-neon);
+}
+
+@media only screen and (max-width: 820px) {
+	button {
+		width: 5rem;
+		padding: 1.5rem;
+	}
+
+	.divider-mobile {
+		display: block;
+	}
+
+	.divider-desktop {
+		display: none;
+	}
+}
