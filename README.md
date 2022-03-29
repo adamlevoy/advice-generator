@@ -13,7 +13,8 @@ Users should be able to:
 
 ### Screenshot
 
-![](/assets/screenshot_desktop.png)
+![](./public/assets/screenshot_desktop.png)
+![](./public/assets/screenshot_mobile.png)
 
 ![](/assets/screenshot_mobile.png)
 
